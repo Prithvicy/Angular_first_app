@@ -1,6 +1,5 @@
 <form [formGroup]="login"   (ngSubmit)="submit()" >
   <div class="container" style="display: flex; flex-direction: column">
-    <div>
     <label ><b>Username</b></label>
     <input
       style="width: 20%"
@@ -11,12 +10,10 @@
       class="input"
       formControlName="email"
     >
-    </div>
     <div class="jpr1" *ngif="!login.controls['email'].valid && login.controls['email'].touched">
       A valid email is needed
     </div>
 
-<div>
     <label ><b>Password</b></label>
     <input
       style="width: 20%"
@@ -26,7 +23,6 @@
       class="input"
       formControlName="password"    
      >
-    </div>
      <div class="jpr1" *ngif="!login.controls['password'].valid && login.controls['password'].minlength(6)">
       A valid pass is needed
     </div>
